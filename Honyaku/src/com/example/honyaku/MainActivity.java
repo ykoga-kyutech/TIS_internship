@@ -20,9 +20,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 @SuppressLint("NewApi")
-public class MainActivity extends Activity /*implements LoaderCallbacks<String>*/ {
+public class MainActivity extends Activity implements LoaderCallbacks<RecognizeResultData> {
 	
-	static final String APIKEY = "53366d555543786e616442564577494850774e7372467a507a3752662f314c756577423553633565467439";
 	private Button button1;
 	private ImageView imageView1;
 	
@@ -31,20 +30,15 @@ public class MainActivity extends Activity /*implements LoaderCallbacks<String>*
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		findViews();
-		setListeners();
+//		findViews();
+//		setListeners();
 
-// AsyncLoaderを使うとき
-//		Bundle bundle = new Bundle();
+		// AsyncLoaderを使う
+		Bundle bundle = new Bundle();
 //    	bundle.putString("url", "https://api.apigw.smt.docomo.ne.jp/characterRecognition/v1/scene?APIKEY=53366d555543786e616442564577494850774e7372467a507a3752662f314c756577423553633565467439");
-//        // loaderの初期化
-//    	getLoaderManager().initLoader(0, bundle, this);
+		// loaderの初期化
+		getLoaderManager().initLoader(0, bundle, this);
 		
-		// 文字認識 。ここでエラー
-//		CharacterRecognition crec = new CharacterRecognition(APIKEY);
-//		RecognizeResultData result = crec.getResult();
-//		crec.printResult(result);
-		// 認識結果表示など
 	}
 
 	@Override
@@ -54,28 +48,27 @@ public class MainActivity extends Activity /*implements LoaderCallbacks<String>*
 		return true;
 	}
 
-// AsyncLoaderを使うとき
-/*
 	@Override
-	public Loader<String> onCreateLoader(int id, Bundle bundle) {
-		HttpAsyncLoader loader  = new HttpAsyncLoader(this, bundle.getString("url"));
+	public Loader<RecognizeResultData> onCreateLoader(int id, Bundle bundle) {
+		AsyncLoader loader = new AsyncLoader(this);
 		loader.forceLoad();
 		return loader;
 	}
-
+	
 	@Override
-	public void onLoadFinished(Loader<String> loader, String body) {	
+	public void onLoadFinished(Loader<RecognizeResultData> loader,
+			RecognizeResultData body) {
+		// TODO Auto-generated method stub
 		if ( loader.getId() == 0 ) {
 			if (body != null) {
-			    Log.d("",  body);
 			}
 		}
 	}
 
 	@Override
-	public void onLoaderReset(Loader<String> loader) {
+	public void onLoaderReset(Loader<RecognizeResultData> loader) {
 	}
-*/
+	
 	protected void findViews(){
 		button1 = (Button)findViewById(R.id.button1);
 		imageView1 = (ImageView)findViewById(R.id.imageView1);
