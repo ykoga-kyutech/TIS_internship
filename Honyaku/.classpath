@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/commons-logging-1.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/docomo-common-java-sdk-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/docomo-recognition-java-sdk-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/httpclient-4.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/httpcore-4.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/httpmime-4.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/jackson-annotations-2.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/jackson-core-2.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sdl/Downloads/Character_Recognition_API_Java_SDK_v1.0.0/libs/jackson-databind-2.2.0.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
