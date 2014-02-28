@@ -24,21 +24,20 @@ public class CharacterRecognition {
 		this.apikey = apikey;
 	}
 	
-	RecognizeResultData getResult(){
+	RecognizeResultData getResult(String imgfile){
 		try {
 			// 開発者ポータルから取得したAPIキーの設定
-			AuthApiKey.initializeAuth(apikey);
-
+			AuthApiKey.initializeAuth(this.apikey);
+			
 			// パラメータクラスを生成して、各項目を設定する
 			CharacterRecognizeRequestParam param = new CharacterRecognizeRequestParam();
 			param.setLang(Lang.CHARACTERS_JP);
-			param.setFilePath("images.jpg"); // カメラで撮った画像にする
+			param.setFilePath(imgfile);
 			param.setImageContentType(ImageContentType.IMAGE_JPEG);
 
 			// 行画像認識要求クラスを生成してリクエストを実行する
 			LineCharacterRecognize recognize = new LineCharacterRecognize();
 			RecognizeResultData resultData = recognize.request(param);
-
 			return resultData;
 
 		} catch (SdkException e) {

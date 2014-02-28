@@ -11,12 +11,23 @@
 	    android:layout_height="wrap_content"
 	    android:layout_weight="1.00"
 	    android:background="#000000" />
+	
+	<TextView
+	    android:id="@+id/pushBelowMsgTextView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="24sp"
+	    android:text="Push the below button to start character translation"
+	    android:textAppearance="?android:attr/textAppearanceSmall" >
+
+    </TextView>
 
 	<Button
-	    android:id="@+id/button1"
+	    android:id="@+id/buttonCapture"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_weight="0.10"
+	    android:textSize="48sp"
 	    android:text="Take a picture" />
 
 </LinearLayout>
